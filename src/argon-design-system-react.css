@@ -11589,3 +11589,15 @@ td.rdtYear:hover {
 .overflow-y-scroll {
   overflow-y: auto
 }
+
+.login-container {
+  position: absolute;
+  top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}

@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import configureStore from './redux/create';
 import RouteWithSubRoute from './utils/RouteWithSubRoute';
 import NotFound from './components/NotFound/NotFound'
+import App from './components/App/App'
 import { routes } from './routes'
 
 import './argon-design-system-react.css';
@@ -18,13 +19,15 @@ export const history = createBrowserHistory();
 ReactDOM.render(
   <Provider store={configureStore(history)}>
     <ConnectedRouter history={history}>
-      <Switch>
-        {routes.map((route) => (
-          <RouteWithSubRoute key={route.path} {...route} />
-        ))
-        }
-        <Route component={NotFound} />
-      </Switch>
+      <App>
+        <Switch>
+          {routes.map((route) => (
+            <RouteWithSubRoute key={route.path} {...route} />
+          ))
+          }
+          <Route component={NotFound} />
+        </Switch>
+      </App>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root'));
