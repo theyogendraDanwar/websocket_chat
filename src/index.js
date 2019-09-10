@@ -6,12 +6,12 @@ import { ConnectedRouter } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import * as serviceWorker from './serviceWorker';
 
-import configureStore from './redux/store';
+import configureStore from './redux/create';
 import RouteWithSubRoute from './utils/RouteWithSubRoute';
 import NotFound from './components/NotFound/NotFound'
 import { routes } from './routes'
 
-import './index.css';
+import './argon-design-system-react.css';
 
 export const history = createBrowserHistory();
 

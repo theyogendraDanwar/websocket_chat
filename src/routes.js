@@ -1,40 +1,14 @@
-import App from './containers/AppContainer'
-import {
-  Sandwiches, 
-  Tacos,
-  Bus,
-  Cart, 
-  DefaultTab
-} from './components/App/App'
+import Login from './containers/LoginContainer'
+import Home from './containers/HomeContainer'
 
-export const routes = [{
-  path: '/',
-    component: App,
-    routes: [
-      {
-        path: '/sandwiches',
-        component: Sandwiches
-      },
-      {
-        path: '/tacos',
-        component: Tacos,
-        routes: [
-          {
-            path: '/tacos/cart',
-            component: Cart,
-            label: "Cart"
-          },
-          {
-            path: '/tacos/bus',
-            component: Bus,
-            label: "BUS"
-          },
-          {
-            path: '/tacos/default',
-            component: DefaultTab,
-            label: "One",
-          },
-        ],
-      }
-    ]
-}]
+export const routes = [
+  { path: '/',
+    component: Login,
+    exact: true,
+  },
+  {
+    path: "/home",
+    exact: true,
+    component: Home,
+  }
+]

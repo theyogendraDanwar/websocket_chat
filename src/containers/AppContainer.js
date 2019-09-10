@@ -1,6 +1,5 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import App from '../components/App/App'
-import * as actionTypes from '../redux/modules/sim/simpleReducer'
 
 const mapStateToProps = (state) => ({
   ...state
